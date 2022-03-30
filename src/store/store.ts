@@ -1,8 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit";
+import { iconsApi } from "./api/icons.api";
 
 export const store = configureStore({
-  reducer: {},
-})
+  reducer: {
+    [iconsApi.reducerPath]: iconsApi.reducer,
+  },
+});
 
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

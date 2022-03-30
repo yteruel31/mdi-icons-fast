@@ -11,7 +11,11 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <MantineProvider>
+        <MantineProvider
+          theme={{ colorScheme: "dark" }}
+          withNormalizeCSS
+          withGlobalStyles
+        >
           <App />
         </MantineProvider>
       </Provider>
