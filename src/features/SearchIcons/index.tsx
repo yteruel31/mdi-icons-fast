@@ -8,6 +8,7 @@ import {
   Group,
   useMantineTheme,
 } from "@mantine/core";
+import { useDebouncedValue } from "@mantine/hooks";
 import React, { useState } from "react";
 import { useSearchIconsQuery } from "../../store/api/icons.api";
 import IconItem from "./components/IconItem";
@@ -16,10 +17,11 @@ function SearchIcons() {
   const theme = useMantineTheme();
   const [activePage, setPage] = useState(1);
   const [query, setQuery] = useState<string>();
+  const [debounced] = useDebouncedValue(query, 500);
   const { data, isLoading } = useSearchIconsQuery({
     skip: activePage - 1,
     take: 150,
-    name: query,
+    name: debounced,
   });
 
   if (isLoading) {

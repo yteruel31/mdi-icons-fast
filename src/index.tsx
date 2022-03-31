@@ -1,4 +1,5 @@
 import { MantineProvider } from "@mantine/core";
+import { NotificationsProvider } from "@mantine/notifications";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -16,7 +17,9 @@ ReactDOM.render(
           withNormalizeCSS
           withGlobalStyles
         >
-          <App />
+          <NotificationsProvider>
+            <App />
+          </NotificationsProvider>
         </MantineProvider>
       </Provider>
     </BrowserRouter>
