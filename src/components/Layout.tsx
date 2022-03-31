@@ -31,6 +31,7 @@ const Layout: React.FC = () => {
           <Group position="apart" mx={20}>
             <Title>Mdi Icons Fast</Title>
             <ActionIcon<"a">
+              component="a"
               size="xl"
               href="https://github.com/yteruel31/mdi-icons-fast"
               target="_blank"
