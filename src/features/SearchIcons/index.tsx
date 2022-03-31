@@ -20,7 +20,7 @@ function SearchIcons() {
   const [debounced] = useDebouncedValue(query, 500);
   const { data, isLoading } = useSearchIconsQuery({
     skip: activePage - 1,
-    take: 150,
+    take: 80,
     name: debounced,
   });
 
@@ -78,7 +78,7 @@ function SearchIcons() {
       />
       <Card>
         <SimpleGrid
-          cols={15}
+          cols={10}
           breakpoints={[
             { maxWidth: 980, cols: 3, spacing: "md" },
             { maxWidth: 755, cols: 2, spacing: "sm" },
@@ -90,13 +90,15 @@ function SearchIcons() {
           ))}
         </SimpleGrid>
       </Card>
-      <Group mt={15} position="center">
-        <Pagination
-          page={activePage}
-          onChange={setPage}
-          total={data?.total as number}
-        />
-      </Group>
+      {(data?.total as number) > 0 && (
+        <Group mt={15} position="center">
+          <Pagination
+            page={activePage}
+            onChange={setPage}
+            total={data?.total as number}
+          />
+        </Group>
+      )}
     </>
   );
 }

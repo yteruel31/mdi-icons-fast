@@ -41,9 +41,9 @@ const IconItem: React.FC<{ icon: IconDto }> = (props) => {
         onClose={() => setVisible(false)}
         target={
           <Tooltip label={icon.name}>
-            <ActionIcon size="xl" onClick={() => setVisible((m) => !m)}>
+            <ActionIcon size={70} onClick={() => setVisible((m) => !m)}>
               <svg
-                style={{ width: "24px", height: "24px" }}
+                style={{ width: "35px", height: "35px" }}
                 viewBox="0 0 24 24"
               >
                 <path fill="currentColor" d={icon.data} />
