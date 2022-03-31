@@ -10,6 +10,8 @@
 
 ### 🎉 [Mdi Icons Fast](https://mdi-icons-fast.herokuapp.com/)
 
+Made with React, Mantine.dev, Nest.js, Prisma
+
 ## Prerequisites
 
 - PostgresSQL database
