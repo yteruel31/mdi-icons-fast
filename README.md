@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+# Mdi Icons Fast
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Twitter Follow](https://img.shields.io/twitter/follow/YoannTeruel?style=social)](https://twitter.com/YoannTeruel)
 
-## Available Scripts
+![Mdi Icons Fast](mdi-icons-fast.gif)
 
-In the project directory, you can run:
+> Mdi Icons search engine. Faster than the [original](https://materialdesignicons.com).
+> Searching icons with the original website is really waste of time because this website is very laggy...
+> So I've decided to build my own search engine.
 
-### `yarn start`
+### 🎉 [Mdi Icons Fast](https://mdi-icons-fast.herokuapp.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- PostgresSQL database
 
-### `yarn test`
+## Install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm install
+```
 
-### `yarn build`
+Do this command for the api too. The api source code is located in > `src/api`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Environment variable
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Front
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+REACT_APP_API_URL
+```
 
-### `yarn eject`
+### Back
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+DATABASE_URL
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Run the front
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```sh
+npm run react:start
+```
 
-## Learn More
+### Run the back (src/api)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Execute migration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npx prisma migrate deploy
+```
+
+Execute seeder
+
+```sh
+npx prisma db seed
+```
+
+Execute the app
+
+```sh
+npm run start
+```
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to
+check [issues page](https://github.com/yteruel31/mdi-icons-fast/issues).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
