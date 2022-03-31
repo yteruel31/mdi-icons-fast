@@ -2,6 +2,7 @@
   "name": "mdi-icons-fast",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://mdi-icons-fast-api.herokuapp.com",
   "dependencies": {
     "@mantine/core": "^4.1.0",
     "@mantine/hooks": "^4.1.0",
